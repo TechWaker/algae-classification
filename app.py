@@ -30,5 +30,5 @@ if uploaded_file is not None:
         prediction = dic[p[0]]
         if prediction == 'red':
             st.markdown('This is likely to be a Red Algae')
-        else if prediction == 'green':
+        elif prediction == 'green':
             st.markdown('This is more likely to be a Green Algae.')
