@@ -8,10 +8,10 @@ st.title("Binary image Classification")
 st.header("Chakka Manga Classification")
 st.text("Upload an image for image classification as Jackfruit or mango")
 
-model = load_model('keras_model.h5')
 dic = {0 : 'red', 1 : 'green'}
 
-def teachable_machine_classification(img):
+def teachable_machine_classification(img,  weights_file):
+    model = keras.models.load_model(weights_file)
     size = (224, 224)
     img = ImageOps.fit(img, size, Image.ANTIALIAS)
     img = np.asarray(img) 
