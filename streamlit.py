@@ -1,6 +1,7 @@
 import streamlit as st
 import keras
 from PIL import Image, ImageOps
+from keras.models import load_model
 import numpy as np
 
 st.title("Binary image Classification")
