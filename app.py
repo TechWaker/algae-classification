@@ -4,9 +4,9 @@ from PIL import Image, ImageOps
 from keras.models import load_model
 import numpy as np
 
-st.title("Binary image Classification")
-st.header("Chakka Manga Classification")
-st.text("Upload an image for image classification as Jackfruit or mango")
+st.title("Algae Classification")
+st.header("Algae Classification based on Color")
+st.text("Upload an image for image classification as Red or Green Algae")
 
 dic = {0 : 'red', 1 : 'green'}
 
