@@ -28,7 +28,7 @@ if uploaded_file is not None:
         st.write("Classifying...")
         p = teachable_machine_classification(image, 'keras_model.h5')
         prediction = dic[p[0]]
-        if prediction == 'red:
+        if prediction == 'red':
             st.markdown('This is likely to be a Red Algae')
         else if prediction == 'green:
             st.markdown('This is more likely to be a Green Algae.')
