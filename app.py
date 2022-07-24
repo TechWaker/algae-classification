@@ -20,7 +20,7 @@ def teachable_machine_classification(img,  weights_file):
     p = np.argmax(model.predict(img), axis=1)
     return p 
 
-uploaded_file = st.file_uploader("Choose an image ...", type=["jpg","jpeg"])
+uploaded_file = st.file_uploader("Choose an image ...", type=[ 'png', "jpg","jpeg"])
 if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded Image.', use_column_width=True)
