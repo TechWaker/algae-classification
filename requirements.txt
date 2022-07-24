@@ -3,3 +3,5 @@ numpy
 keras
 tensorflow-cpu
 gunicorn
+streamlit
+pillow
