@@ -6,7 +6,7 @@ import numpy as np
 
 st.title("Algae Classification")
 st.header("Algae Classification based on Color")
-st.text("Upload an image for image classification as Red or Green Algae")
+st.text("Upload an image(.jpg or .jpeg) for image classification as Red or Green Algae")
 
 dic = {0 : 'red', 1 : 'green'}
 
@@ -20,7 +20,7 @@ def teachable_machine_classification(img,  weights_file):
     p = np.argmax(model.predict(img), axis=1)
     return p 
 
-uploaded_file = st.file_uploader("Choose an image ...", type=[ "png", "jpg","jpeg"])
+uploaded_file = st.file_uploader("Choose an image ...", type=["jpg","jpeg"])
 if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded Image.', use_column_width=True)
